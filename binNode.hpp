@@ -35,11 +35,11 @@ class BinNode{
         return info;
     }
 //###########################################################################################
-    BinNode* getRight(){        //Getter for the right Son
+    BinNode* getRightSon(){        //Getter for the right Son
         return right;
     }
 //###########################################################################################
-    BinNode* getLeft(){         //Getter for the left son
+    BinNode* getLeftSon(){         //Getter for the left son
         return left;
     }
 //###########################################################################################
