@@ -55,6 +55,9 @@ class BinaryTree{
                     }
                 }
             }
+            if(flag){
+                weight++;
+            }
         }
     }
 
