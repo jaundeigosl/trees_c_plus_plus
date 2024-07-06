@@ -44,8 +44,8 @@ class BinNode{
     }
 //###########################################################################################
     ~BinNode(){     //Destructor
-        free(left);
-        free(right);
+        left = nullptr;
+        right = nullptr;
     }
 
 

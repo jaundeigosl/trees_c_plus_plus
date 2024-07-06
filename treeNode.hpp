@@ -6,37 +6,50 @@ class treeNode
 {
 private:
     T info;
-    list<treeNode<T> sons;
-public:
-    tree_node(/* args */);
-    ~tree_node();
-    tree_node(T info);
-    void setInfo(T newInfo);
+    treeNode<T> * leftSon;
+    treeNode<T> * rightBrother;
 
+public:
 //###########################################################################################
     treeNode(/* args */){ //CONSTRUCTOR
-        weigth = 0;
+        leftSon = nullptr;
+        rightBrother = nullptr;
     }
 //###########################################################################################
-    treeNode(T info){//CONSTRUCTOR with info
-        info = info;
-        weight = 1;
+    treeNode(T newInfo){//CONSTRUCTOR with info
+        info = newInfo;
+        leftSon = nullptr;
+        rightBrother = nullptr;
+    }
+//###########################################################################################
+    T getInfo(){
+        return info;
+    }
+//###########################################################################################
+    treeNode<T>* getLeftSon(){
+        return leftSon;
+    }
+//###########################################################################################
+    treeNode<T>* getRightBrother(){
+        return rightBrother;
     }
 //###########################################################################################
     void setInfo(T newInfo){    //INFO setter
         info = newInfo;
     }
 //###########################################################################################
-    void setLeftSon(treeNode<T>* newLeft){
-        left = newLeft;
+    void setRightBrother(treeNode<T>* newRightBrother){
+        rightBrother = newRightBrother;
     }
 //###########################################################################################
-    void setLeftSon(treeNode<T>* newright){
-        left = newRigth;
+    void setLeftSon(treeNode<T>* newLeftSon){
+        leftSon = newLeftSon;
     }
 
 //###########################################################################################
-    treeNode::~treeNode(){//DESTRUCTOR
+    ~treeNode(){//DESTRUCTOR
+        leftSon=nullptr;
+        rightBrother=nullptr;
     }
 
 };
